@@ -19,9 +19,10 @@ noBtn.addEventListener("touchstart", moveNoButton);
 yesBtn.addEventListener("click", () => {
   document.body.innerHTML = `
     <div style="text-align:center">
-      <h1>YAY!! 💖🥰</h1>
-      <p>I knew it 😘</p>
+      <h1>FUCK YES!!💖</h1>
+      <p>Thank you pi😘</p>
       <img src="https://media.tenor.com/8GZNOvQ4pPAAAAAC/love-bear.gif" width="250">
     </div>
   `;
 });
+
