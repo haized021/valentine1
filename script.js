@@ -1,28 +1,22 @@
-const noBtn = document.getElementById("noBtn");
-const yesBtn = document.getElementById("yesBtn");
+let noSize = 18;
 
-function moveNoButton() {
-  const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
-  const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+function openEnvelope() {
+    document.querySelector(".envelope").classList.add("open");
 
-  noBtn.style.left = `${x}px`;
-  noBtn.style.top = `${y}px`;
+    setTimeout(() => {
+        document.getElementById("envelopeScreen").style.display = "none";
+        document.getElementById("card").classList.remove("hidden");
+    }, 800);
 }
 
-// Move on hover (PC)
-noBtn.addEventListener("mouseover", moveNoButton);
+function noClick() {
+    noSize += 6;
+    document.getElementById("noBtn").style.fontSize = noSize + "px";
+}
 
-// Move on touch (Mobile)
-noBtn.addEventListener("touchstart", moveNoButton);
+function yesClick() {
+    alert("YAY!! ❤️🥰 Happy Valentine's Day!");
+}
 
-// YES button effect
-yesBtn.addEventListener("click", () => {
-  document.body.innerHTML = `
-    <div style="text-align:center">
-      <h1>FUCK YES!!💖</h1>
-      <p>Thank you pi😘</p>
-      <img src="https://media.tenor.com/8GZNOvQ4pPAAAAAC/love-bear.gif" width="250">
-    </div>
-  `;
-});
+
 
